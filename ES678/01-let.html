@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //let 和var 区别
+
+    // 1.let 定义的变量不能再定义，var可以
+    var a = 1;
+    var a = 2;
+    let a= 1
+    let a = 2//会报错
+
+    // 2. let 变量不会声明提升，var变量会声命提升
+    connsole.log(b) //报错b is not undefined
+    let b = 1;
+
+    console.log(a);
+    var a = 1;//不会报错，打印为undefined
+
+    // 3. let 是块级作用域，var 是函数级作用域
+
+    if(true){
+        var a = 1;
+        let b = 1;
+    }
+    console.log(a) //打印1，不会报错是因为整体在windows里这个函数中。
+    conosle.log(b) //报错，因为let是{}级作用域。
+
+
+
+
+</script>
+</html>

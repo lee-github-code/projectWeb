@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点我</button>
+    <button>点我</button>
+    <button>点我</button>
+    <button>点我</button>
+</body>
+<script>
+    var btns = document.getElementsByTagName('button');
+    console.log(btns);
+
+    // 利用给每个dom添加特定属性
+    for (var i = 0; i < btns.length; i++) {
+        btn[i].index = 1;
+        btns[i].onclick = function () {
+            console.log(this.index)
+        }
+    }
+
+    // 使用闭包形成会计作用域，如果为块级作用域则里面的值就不会受到全局的影响
+    for (var i = 0; i < btns.length; i++) {
+        (function (i) {
+            btns[i].onclick = function () {
+                console.log(i)
+            }
+        })(i)
+
+    }
+
+    // 块级作用域
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].onclick = function () {
+            console.log(i)
+        }
+    }
+
+</script>
+
+</html>

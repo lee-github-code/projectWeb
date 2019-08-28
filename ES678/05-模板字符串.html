@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>点我</button>
+
+</body>
+<script>
+  let arr = ["吃饭", "睡觉", "打豆豆"];
+  let btnDom = document.getElementsByTagName("button")[0];
+  btnDom.onclick = function () {
+    let html = '';
+    html += '<ul>';
+    arr.map(node => {
+      // html+='<li>'+node+'</li>';
+      html += `<li>${node}</li>`;
+    })
+    html += '</ul>';
+    document.body.innerHTML = html;
+  }
+
+// 字符串补全 
+// padStart 与 padEnd 只针对字符串，不针对number
+let num1 = '1';
+let num2 = '12';
+console.log(num1.padStart(5,0))
+console.log(num2.padStart(5,0))
+console.log(num1.padEnd(5,0))
+console.log(num2.padEnd(5,0))
+
+</script>
+
+</html>

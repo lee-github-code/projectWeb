@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // 1.数组结构解析，是左边对应右边的数组位置相同来进行结构解析
+  /*let [a,b,c]=[1,2,3]//打印a，b，c为1，2，3
+
+  let [a,[b,c],d]=[1,[2,3],4] //打印abcd为1234，可以嵌套解析
+
+  let [a,[b],d]=[1,[2,3],4]  //打印为1234*/
+
+  // let [a,[b,c],d]=[1,[2],4] //1 2 undefined 4
+  let [a, [b, c = 3], d] = [1, [2], 4]
+
+  console.log(a, b, c, d)
+
+
+  // 对象解析
+
+  let obj = {
+    name: 'tom',
+    age: '18',
+    gread: {
+      name: "aym",
+      age: '17'
+    }
+  }
+  // let {name,age,firend} = obj; //tom 18 {name: "aym", age: "17"}
+
+  // let {name:name1,age:age1,firend:firend1} = obj;  //tom 18 {name: "aym", age: "17"}
+
+  // let {name:name1,age:age1,class:class1="1",firend:firend1} = obj;  
+  // tom 18 {name: "aym", age: "17"} 1
+
+  // let {name:name1,age,firend:firend1,class:class1="1"} = obj;
+  //如果右边没有值而解析，前边为class:class1="1"，class:class="1" 也会报错
+
+  // let { name, age,gread, firend=18} = obj;
+
+//如果右边没有则左边可以赋初值 ；所以在结构取值的时候喜欢{item={}}=data
+
+// let { name, age,gread:{name:name1,age:age1}, firend=18} = obj;
+let { name:name1, age:age1,gread,gread:{name,age}, firend=18} = obj;
+
+//第一个打印会报错，因为没有解析gread,解析了里面的name1
+  let { name:name1, age:age1,gread,gread:{name,age}, firend=18} = obj
+  //测验更改相同名字的不能使用，解析结构左边不能出现相同的名字
+  console.log( name1, age1,gread,firend ,name);
+
+</script>
+
+</html>
