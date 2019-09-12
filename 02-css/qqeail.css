@@ -1,0 +1,81 @@
+.top {
+  padding: 0px 50px;
+  /* 宽度 */
+  height: 40px;
+  background: grey;
+  line-height: 40px
+}
+
+.top .logo {
+  float: left;
+  height: 30px;
+  background: red;
+  width: 100px;
+  margin-top: 5px
+}
+
+.top .nav-right {
+  float: right;
+}
+
+.top .nav-right li {
+  float: right;
+}
+
+.contain {
+  width: 1260px;
+}
+
+.contain form {
+  float: right;
+  height: 400px;
+  width: 300px;
+  border: 1px solid #ebebeb;
+  margin-top: 100px;
+}
+
+.form-top {
+  height: 40px;
+  border-bottom: 1px solid #ebebeb;
+  display: flex;
+}
+
+.form-top span {
+  width: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+
+.form-top span:first-child {
+  border-right: 1px solid #ebebeb;
+}
+form{
+  text-align: center;
+}
+form .input{
+  height: 40px;
+  margin-top: 40px;
+  width: 200px;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+/* form .input:hover{
+  border-color: none;
+} */
+.remenber{
+  margin-top: 40px
+}
+.addbtn{
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.bottom{
+  margin-top: 20px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  border: none;
+}
+.bottom ul,.bottom ul li{
+  float: right;
+}

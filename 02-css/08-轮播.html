@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>轮播</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .carouselBox {
+    height: 300px;
+    width: 500px;
+    border: 1px solid #ebebeb;
+    margin: 100px auto;
+    overflow: hidden;
+  }
+
+  ul {
+    height: 300px;
+    width: 2000px;
+    animation: sport 5s linear 0s infinite normal;
+  }
+
+  li {
+    height: 300px;
+    width: 500px;
+    float: left;
+    list-style: none;
+    /* transition: all 1s; */
+  }
+
+  img {
+    height: 300px;
+    width: 500px;
+  }
+
+  @keyframes sport {
+    from {
+      margin-left: 0px;
+    }
+
+    to {
+      margin-left: -1500px
+    }
+
+  }
+  ul:hover{
+    animation-play-state: paused;
+  }
+  ul:hover li{
+    opacity: 0.2;
+  }
+  ul li:hover{
+    opacity: 1;
+  }
+</style>
+
+<body>
+  <div class="carouselBox">
+    <ul>
+      <li><img src="./images/03.jpg" alt=""></li>
+      <li><img src="./images/05.jpg" alt=""></li>
+      <li><img src="./images/04.jpg" alt=""></li>
+      <li><img src="./images/03.jpg" alt=""></li>
+    </ul>
+  </div>
+</body>
+
+</html>

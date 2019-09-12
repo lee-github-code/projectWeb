@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .fatherBox {
+    height: 500px;
+    width: 500px;
+    border: 1px solid;
+    position: relative;
+  }
+
+  .sonBox {
+    height: 50px;
+    width: 50px;
+    background: blue;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    animation: sport 3s linear 0s infinite normal;;
+  }
+
+  @keyframes sport {
+    0% {
+      top: 0px;
+      left: 0px;
+    }
+
+    25% {
+      top: 0px;
+      left: 450px;;
+    }
+
+    50% {
+      top: 450px;
+      left: 450px;
+    }
+
+    75% {
+      top: 450px;
+      left: 0px;
+    }
+
+    100% {
+      top: 0px;
+      left: 0px;
+    }
+  }
+</style>
+
+<body>
+  <div class="fatherBox">
+    <div class="sonBox"></div>
+  </div>
+</body>
+
+</html>
