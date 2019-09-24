@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="radio" name="sex">男
+  <input type="radio" name="sex">女
+  <div id="boxContent">
+    我是内容内容
+  </div>
+</body>
+<script>
+  // 原生
+
+  //选中所有的元素
+  var inputs = document.getElementsByTagName('input');
+  for (var i = 0; i < inputs.length; i++) {
+    //循环所有的元素点击的时候 
+    inputs[i].onclick = function () {
+      // 先把所有的还原
+      for (var j = 0; j < inputs.length; j++) {
+        inputs[j].disabled = false;
+      }
+      // 把点击的变灰
+      this.disabled = true;
+    }
+  }
+  var box = document.getElementById('boxContent');
+  box.style.color = 'red';
+
+  // jQuery
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  //存储
+  function setCookie(name, val, date) {
+    var oDate = new Date();
+    oDate.setDate(oDate.getDate() + date);
+    document.cookie = name + '=' + val + ';expires=' + oDate;
+  }
+  function getCookie(name) {
+    var strCookie = document.cookie;
+    var cookieArr = strCookie.split(';');
+    for (var i = 0; i < cookieArr.length; i++) {
+      var itemArr = cookieArr[i].split('=');
+      if (itemArr[0] == name) {
+        return itemArr[1]
+      }
+    }
+  }
+  function delCookie(name){
+    setCookie('name',false,-1)
+  }
+  setCookie('name', 'fuxuemei', 1);
+  console.log(getCookie('name'))
+  // delCookie('name')
+
+</script>
+
+</html>
