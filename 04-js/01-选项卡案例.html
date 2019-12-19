@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>选项卡案例</title>
+</head>
+<style>
+  li {
+    list-style: none;
+    display: inline-block;
+    width: 100px;
+    border: 1px solid black;
+  }
+
+  div {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    display: none;
+  }
+
+  .active {
+    background-color: yellow;
+  }
+
+  .bagr-none {
+    background-color: none;
+  }
+
+  .block {
+    display: block;
+  }
+
+  .dis-none {
+    display: none;
+  }
+</style>
+
+<body>
+  <ul>
+    <li class="active">btn1</li>
+    <li>btn2</li>
+    <li>btn3</li>
+    <li>btn4</li>
+  </ul>
+  <div class="block">btn1案例</div>
+  <div>btn2案例</div>
+  <div>btn3案例</div>
+  <div>btn4案例</div>
+</body>
+<script>
+  var aBtn = document.getElementsByTagName('li')
+  var aDiv = document.getElementsByTagName('div')
+  for (var i = 0; i < aBtn.length; i++) {
+    aBtn[i].index=i;
+    aBtn[i].onclick = function () {
+      for (var j = 0; j < aBtn.length; j++) {
+        aBtn[j].className = "bagr-none";
+        aDiv[j].className = "dis-none";
+      }
+      this.className = "active";
+      aDiv[this.index].className="block";
+    }
+  }
+
+</script>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+  <div id="content" style="height: 20px;border: 1px solid #ebebeb;">
+
+  </div>
+  <button id="before">上一页</button>
+  <button id="next">下一页</button>
+</body>
+<script>
+  var content = document.getElementById('content');
+  var before = document.getElementById('before');
+  var next = document.getElementById('next');
+    
+  var str =["11","22","33","44","55"]
+  var index=0;
+
+  before.disabled=true;
+  content.innerHTML=str[index]
+
+  before.onclick=function(){
+    next.disabled=false;
+    index--
+    content.innerHTML=str[index]
+    if(index==0){
+      before.disabled=true;
+    }
+  }
+  next.onclick=function(){
+    before.disabled=false;
+    index++
+    content.innerHTML=str[index]
+    if(index==str.length-1){
+      next.disabled=true;
+    }
+  }
+  
+</script>
+</html>
